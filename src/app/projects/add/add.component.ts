@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ProjetsService } from '../Services/projets.service';
+import { Projet } from '../Models/projet';
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
@@ -8,10 +9,10 @@ import { ProjetsService } from '../Services/projets.service';
 })
 export class AddComponent implements OnInit{
   constructor(private ProjetsService:ProjetsService){
-    //this.http.get("https://www.mani-api.ma/api/Projets").subscribe();
+    this.projet=new Projet();
   }
+  projet:Projet;
   ngOnInit(): void {
-    //this.http.get("https://www.mani-api.ma/api/Projets").subscribe();
     this.ProjetsService.getAll().subscribe({
       next : () => {
         alert("Hello!");
