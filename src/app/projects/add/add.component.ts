@@ -12,5 +12,10 @@ export class AddComponent implements OnInit{
   }
   ngOnInit(): void {
     //this.http.get("https://www.mani-api.ma/api/Projets").subscribe();
+    this.ProjetsService.getAll().subscribe({
+      next : () => {
+        alert("Hello!");
+      }
+    });
   }
 }

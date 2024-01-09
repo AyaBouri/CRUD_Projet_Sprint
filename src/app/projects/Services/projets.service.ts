@@ -1,11 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 @Injectable({
-  providedIn: 'root'
+  providedIn: "any"
 })
 export class ProjetsService {
+  url:string="https://www.mani-api.ma/api/Projets";
   constructor(private http:HttpClient) { }
   getAll(){
-    return this.http.get("https://www.mani-api.ma/api/Projets").subscribe();
+    return this.http.get(this.url);
   }
 }
