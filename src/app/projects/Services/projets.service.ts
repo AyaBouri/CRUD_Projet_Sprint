@@ -5,4 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ProjetsService {
   constructor(private http:HttpClient) { }
+  getAll(){
+    return this.http.get("https://www.mani-api.ma/api/Projets").subscribe();
+  }
 }
