@@ -15,6 +15,6 @@ export class AddComponent implements OnInit{
   ngOnInit(): void {
   }
   add(){
-    this.ProjetsService
+    this.ProjetsService.add(this.projet).subscribe();
   }
 }

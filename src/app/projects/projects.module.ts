@@ -4,6 +4,7 @@ import { ProjectsRoutingModule } from './projects-routing.module';
 import { AddComponent } from './add/add.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ProjetsService } from './Services/projets.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AddComponent
@@ -11,10 +12,8 @@ import { ProjetsService } from './Services/projets.service';
   imports: [
     CommonModule,
     ProjectsRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  /*providers:[
-    ProjetsService
-  ]*/
 })
 export class ProjectsModule { }
