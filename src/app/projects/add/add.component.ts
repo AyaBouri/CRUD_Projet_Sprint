@@ -13,10 +13,8 @@ export class AddComponent implements OnInit{
   }
   projet:Projet;
   ngOnInit(): void {
-    this.ProjetsService.getAll().subscribe({
-      next : () => {
-        alert("Hello!");
-      }
-    });
+  }
+  add(){
+    this.ProjetsService
   }
 }
