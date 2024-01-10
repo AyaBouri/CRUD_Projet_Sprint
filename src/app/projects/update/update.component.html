@@ -1,1 +1,37 @@
-<p>update works!</p>
+<div class="card">
+    <div class="card-body">
+        <form>
+            <div class="mb-3">
+                <label for class="form-label">Id</label>
+                <input type="text" class="form-control" [(ngModel)]="projet.Id" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for class="form-label">Libelle</label>
+                <input type="text" class="form-control"
+                    [(ngModel)]="projet.Libelle" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for class="form-label">Description</label>
+                <textarea class="form-control"
+                    [(ngModel)]="projet.Description" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for class="form-label">Nombre de jours</label>
+                <input type="number" class="form-control"
+                    [(ngModel)]="projet.SprintDays" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for class="form-label">Date Debut</label>
+                <input type="date" class="form-control"
+                    [(ngModel)]="projet.DateDebut" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3" class="form-label">
+                <label for>Date Fin</label>
+                <input type="date" class="form-control"
+                    [(ngModel)]="projet.DateFin" [ngModelOptions]="{standalone: true}">
+            </div>
+            <button type="submit" class="btn btn-primary"
+                (click)="update()">Update</button>
+        </form>
+    </div>
+</div>

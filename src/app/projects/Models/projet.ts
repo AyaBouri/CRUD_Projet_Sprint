@@ -3,7 +3,7 @@ export class Projet {
     Libelle:string="";
     Description:string="";
     SprintDays:number=0;
-    DateDebut!:Date;
-    DateFin!:Date;
+    DateDebut!:Date | string;
+    DateFin!:Date | string;
     /*"Sprints":null;*/
 }

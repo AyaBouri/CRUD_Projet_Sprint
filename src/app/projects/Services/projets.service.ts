@@ -11,10 +11,16 @@ export class ProjetsService {
   getAll():Observable<Projet[]>{
     return this.http.get<Projet[]>(this.url);
   }
+  getById(id:number):Observable<Projet>{
+    return this.http.get<Projet>(this.url + "/" + id);
+  }
   add(projet:Projet){
     return this.http.post(this.url,projet);
   }
   remove(id:number){
     return this.http.delete(this.url + "/" + id);
+  }
+  update(projet:Projet){
+    return this.http.put(this.url + "/" + projet.Id,projet);
   }
 }
