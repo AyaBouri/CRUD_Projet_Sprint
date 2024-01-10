@@ -14,4 +14,7 @@ export class ProjetsService {
   add(projet:Projet){
     return this.http.post(this.url,projet);
   }
+  remove(id:number){
+    return this.http.delete(this.url + "/" + id);
+  }
 }
