@@ -19,6 +19,14 @@ export class ListComponent implements OnInit{
     });
   }
   remove(id:number){
-    this.ProjetService
+    if(confirm('Vous etes sur du supprimer le projet?')){
+      this.ProjetService.remove(id).subscribe({
+        next:()=>{
+          this.projets=this.projets.filter(p=>p.Id != id);
+        },
+        error:()=>{},
+        complete:()=>{}
+      });
+    }
   }
 }

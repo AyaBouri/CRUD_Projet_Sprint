@@ -37,7 +37,7 @@
                 <td>{{project.DateDebut | date:"dd-MM-yyyy"}}</td>
                 <td>{{project.DateFin | date:"dd-MM-yyyy"}}</td>
                 <td>
-                  <a class="btn btn-warning mx-1" [routerLink]="'/projects/update/'+project.Id"><i class="fa-solid fa-pencil"></i>Update</a>
+                    <a class="btn btn-warning mx-1" [routerLink]="'/projects/update'+project.Id"><i class="fa-solid fa-pencil"></i>Update</a>
                   <button class="btn btn-danger mx-1" (click)="remove(project.Id)"><i class="fa-solid fa-trash"></i>Delete</button>
                 </td>
               </tr>   

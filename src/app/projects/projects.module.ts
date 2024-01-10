@@ -6,10 +6,12 @@ import {HttpClientModule} from '@angular/common/http';
 import { ProjetsService } from './Services/projets.service';
 import { FormsModule } from '@angular/forms';
 import { ListComponent } from './list/list.component';
+import { UpdateComponent } from './update/update.component';
 @NgModule({
   declarations: [
     AddComponent,
-    ListComponent
+    ListComponent,
+    UpdateComponent
   ],
   imports: [
     CommonModule,
