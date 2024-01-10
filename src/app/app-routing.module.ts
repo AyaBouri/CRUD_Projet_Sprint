@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
-  {path:"projects",loadChildren:()=>import('./projects/projects.module').then(prj=>prj.ProjectsModule)}
+  {path:"projects",loadChildren:()=>import('./projects/projects.module').then(prj=>prj.ProjectsModule)},
+  {path:'sprint',loadChildren:()=>import('./sprint/sprint.module').then(sprint=>sprint.SprintModule)}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
