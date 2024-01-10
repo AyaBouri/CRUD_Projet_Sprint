@@ -1,25 +1,37 @@
-<div class="form-group">
-    <label for="">Id</label>
-    <input type="number" class="form-control" [(ngModel)]="projet.Id">
+<div class="card">
+    <div class="card-body">
+        <form>
+            <div class="mb-3">
+                <label for class="form-label">Id</label>
+                <input type="text" class="form-control" [(ngModel)]="projet.Id" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for class="form-label">Libelle</label>
+                <input type="text" class="form-control"
+                    [(ngModel)]="projet.Libelle" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for class="form-label">Description</label>
+                <textarea class="form-control"
+                    [(ngModel)]="projet.Description" [ngModelOptions]="{standalone: true}"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for class="form-label">Nombre de jours</label>
+                <input type="number" class="form-control"
+                    [(ngModel)]="projet.SprintDays" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3">
+                <label for class="form-label">Date Debut</label>
+                <input type="date" class="form-control"
+                    [(ngModel)]="projet.DateDebut" [ngModelOptions]="{standalone: true}">
+            </div>
+            <div class="mb-3" class="form-label">
+                <label for>Date Fin</label>
+                <input type="date" class="form-control"
+                    [(ngModel)]="projet.DateFin" [ngModelOptions]="{standalone: true}">
+            </div>
+            <button type="submit" class="btn btn-primary"
+                (click)="add()">Ajouter</button>
+        </form>
+    </div>
 </div>
-<div class="form-group">
-    <label for="">Libelle</label>
-    <input class="form-control" [(ngModel)]="projet.Libelle">
-</div>
-<div class="form-group">
-    <label for="">Description</label>
-    <textarea class="form-control" [(ngModel)]="projet.Description"></textarea>
-</div>
-<div class="form-group">
-    <label for="">Nombre De Jours</label>
-    <input type="number" class="form-control" [(ngModel)]="projet.SprintDays">
-</div>
-<div class="form-group">
-    <label for="">Date Debut</label>
-    <input type="date" class="form-control" [(ngModel)]="projet.DateDebut">
-</div>
-<div class="form-group">
-    <label for="">Date Fin</label>
-    <input type="date" class="form-control" [(ngModel)]="projet.DateFin">
-</div>
-<button class="btn btn-primary" (click)="add()">Ajouter</button>

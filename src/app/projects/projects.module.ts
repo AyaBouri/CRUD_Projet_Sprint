@@ -5,9 +5,11 @@ import { AddComponent } from './add/add.component';
 import {HttpClientModule} from '@angular/common/http';
 import { ProjetsService } from './Services/projets.service';
 import { FormsModule } from '@angular/forms';
+import { ListComponent } from './list/list.component';
 @NgModule({
   declarations: [
-    AddComponent
+    AddComponent,
+    ListComponent
   ],
   imports: [
     CommonModule,
