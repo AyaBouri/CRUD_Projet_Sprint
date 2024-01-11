@@ -1,9 +1,11 @@
 import { Projet } from "src/app/projects/Models/projet";
 export class Sprints {
-    id:number=0;
-    sprintName:string="";
-    sprintGoal:string="";
-    DateDebut!:Date | string;
-    DateFin!:Date | String;
-    projet:Projet=new Projet();
+    Id:number=0;
+    SprintName:string="";
+    SprintGoal:string="";
+    DateDebut!:Date|string;
+    DateFin!:Date|string;
+    Projet:Projet=new Projet();
+    ProjetId:number=0;
+    /*"UserStories":null*/
 }
